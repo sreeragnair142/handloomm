@@ -173,6 +173,7 @@ body{
 .row > *{
 	padding-right: 15px;
 	padding-left: 15px;
+	padding-top: 30px;
 }
 
 .row.no-gutters{
@@ -695,7 +696,7 @@ header.main-header .header-sticky.active .navbar{
 
 .hero{
 	position: relative;
-	background: url('../images/hero-bg.jpg');
+	background: url('../images/loombanner.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -1204,9 +1205,9 @@ header.main-header .header-sticky.active .navbar{
 /***     07. Our Services css     ***/
 /************************************/
 
-.our-services{
+/* .our-services{
 	padding: 100px 0;
-}
+} */
 
 .service-item{
 	position: relative;

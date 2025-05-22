@@ -1,0 +1,101 @@
+/* Responsive Styles */
+
+/* Large Screens */
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1024px;
+    }
+
+    .hero-title {
+        font-size: 4.5rem;
+    }
+}
+
+/* Medium Screens */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+}
+
+/* Tablet Screens */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .mobile-nav.active {
+        display: block;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 40px 0;
+    }
+
+    .hero-image {
+        opacity: 0.4;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .statistics {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        gap: 32px;
+    }
+
+    .footer-logo h3 {
+        font-size: 1.35rem;
+    }
+}
