@@ -907,6 +907,7 @@
             width: 100%;
         }
 
+
         .row {
             display: flex;
             width: 100%;
@@ -985,3 +986,6 @@
                 font-size: 16px;
             }
         }
+
+
+        
