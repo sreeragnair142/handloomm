@@ -1406,17 +1406,64 @@
                                             <h3>follow our socials</h3>
                                         </div>
                                         <ul>
-                                            <li>
-                                                <a
-                                                    href="https://www.instagram.com/the_loom_theory?igsh=eWplanMxMjVhcWQ0">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://wa.me/YOUR_NUMBER_HERE" target="_blank">
-                                                    <i class="fa-brands fa-whatsapp"></i>
-                                                </a>
-                                            </li>
+   <div class="social-container">
+        <div class="instagram-container">
+            <p class="instagram-text">Please click to follow Instagram</p>
+            <a href="instagram://user?username=the_loom_theory" 
+               onclick="setTimeout(function(){ window.open('https://www.instagram.com/the_loom_theory/', '_blank'); }, 500); return true;"
+               class="instagram-button">
+                <i class="fa-brands fa-instagram"></i>
+                Follow on Instagram
+            </a>
+        </div>
+        
+        <div class="whatsapp-container">
+            <a href="https://wa.me/919645443399" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="whatsapp-button">
+                <i class="fa-brands fa-whatsapp"></i>
+                Chat on WhatsApp
+            </a>
+        </div>
+    </div>
+
+       <script>
+        // Add click event listeners for debugging
+        document.addEventListener('DOMContentLoaded', function() {
+            const instaButton = document.querySelector('.instagram-button');
+            const whatsappButton = document.querySelector('.whatsapp-button');
+            
+            // Instagram button with app detection
+            instaButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('Instagram button clicked');
+                
+                // Try to open Instagram app first
+                const instagramApp = 'instagram://user?username=the_loom_theory';
+                const instagramWeb = 'https://www.instagram.com/the_loom_theory/';
+                
+                // Check if on mobile
+                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                
+                if (isMobile) {
+                    // Try app first, fallback to web
+                    window.location.href = instagramApp;
+                    setTimeout(function() {
+                        window.open(instagramWeb, '_blank');
+                    }, 1000);
+                } else {
+                    // Desktop - open web version
+                    window.open(instagramWeb, '_blank');
+                }
+            });
+            
+            whatsappButton.addEventListener('click', function(e) {
+                console.log('WhatsApp button clicked');
+                // Don't prevent default - let the link work normally
+            });
+        });
+    </script>
                                         </ul>
                                     </div>
 
